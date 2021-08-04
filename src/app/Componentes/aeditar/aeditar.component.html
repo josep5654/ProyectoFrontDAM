@@ -1,0 +1,34 @@
+
+   
+<div *ngFor="let producto of productosEditar" class="fondoFor">
+        <h1>Editar Producto</h1>
+        <form >
+            
+               
+                <input type="text" name="id" [(ngModel)]="producto.id"  id="id" class="margenes" disabled>
+           
+                
+                <input placeholder="Nombre" [(ngModel)]="producto.nombre" id="nombrep" class="margenes" name="nombrep"/>     
+                <input placeholder="Tipo de Alimento"  [(ngModel)]="producto.tipoAlimento" id="tipoAlimento" class="margenes" name="tipoAlimento"/>
+                <input placeholder="Marca"  [(ngModel)]="producto.marca" id="marcap" class="margenes" name="marcap"/>
+                <input placeholder="Contiene gluten?"  [(ngModel)]="producto.estado" id="estadop" class="margenes" name="estadop"/>
+                <input placeholder="Categoria"  [(ngModel)]="producto.categoria" id="categoriap" class="margenes" name="categoriap"/>
+                <input placeholder="Ingredientes" [(ngModel)]="producto.ingredientes" id="ingredientesp" class="margenes2" name="ingredientesp"/>
+                <input placeholder="Capacidad"  [(ngModel)]="producto.capacidad" id="capacidadp" class="margenes" name="capacidadp" type="number"/>
+                <input placeholder="Tipo Capacidad"  [(ngModel)]="producto.tipoCapacidad" id="tipocapacidadp" class="margenes" name="tipocapacidadp"/>
+                <input placeholder="kcal"  [(ngModel)]="producto.kcal" id="kcalp" class="margenes" name="kcalp" type="number"/>
+                <input placeholder="Grasas"  [(ngModel)]="producto.grasa" id="grasap" class="margenes" name="grasap" type="number"/>
+                <input placeholder="Grasa Saturada"  [(ngModel)]="producto.saturadas" id="saturadasp" class="margenes" name="saturadasp" type="number"/>
+                <input placeholder="Hidratros"  [(ngModel)]="producto.hidratos" id="hidratodp" class="margenes" name="hidratosp" type="number">
+                <input placeholder="Azucares"  [(ngModel)]="producto.azucares" id="azucaresp" class="margenes" name="azucaresp" type="number">
+                <input placeholder="Fibra"  [(ngModel)]="producto.fibra" id="fibrap" class="margenes" name="fibrap" type="number">
+                <input placeholder="Proteinas"  [(ngModel)]="producto.proteinas" id="proteinasp" class="margenes" name="proteinasp" type="number"/>
+                <input placeholder="Sal"  [(ngModel)]="producto.sal" id="salp" class="margenes" name="salp" type="number">
+
+
+          
+           <p>
+                <button (click)="guardarEdit(producto)"  Class="myButton">Editar</button>
+            </p>
+        </form>
+      </div>

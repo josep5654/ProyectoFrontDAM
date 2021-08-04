@@ -1,0 +1,25 @@
+
+  <mat-card  class="example-card" >
+    <mat-card-header>
+      <mat-card-title>{{alimentos?.nombre}}</mat-card-title>
+      <mat-card-subtitle><b>Tipo de alimento: </b>{{alimentos?.tipoAlimento}} <br> <b> Marca: </b>{{alimentos?.marca}}<br>  <b> Contiene gluten: {{alimentos.estado}}</b> </mat-card-subtitle>
+    </mat-card-header>
+   <img mat-card-image class="dimensiones" src='{{imagenGlobal}}' id="imagen" alt="Imagen del producto">
+    <mat-card-content>
+      <p>
+        <b>INGREDIENTES: </b>{{alimentos?.ingredientes}}
+      </p>
+    </mat-card-content>
+    <mat-card-content>
+      <p><b>Valores nutricionales por cada {{alimentos.capacidad}} {{alimentos.tipoCapacidad}} de producto.</b></p>
+      <p><b>Kcal: {{alimentos.kcal}}</b></p>
+      <p><b>Grasas: {{alimentos.grasa}} (g)</b><br>De las cuales saturadas: {{alimentos.saturadas}} (g)</p>
+      <p><b>Hidratos: {{alimentos.hidratos}} (g)</b><br>De los cuales azucares: {{alimentos.azucares}} (g) </p>    
+      <p><b>Fibra alimentaria: {{alimentos.fibra}} (g)
+      <br>Proteinas: {{alimentos.proteinas}} (g)
+      <br>Sal: {{alimentos.sal}} (g)</b>
+    </p>
+    
+    </mat-card-content>
+  
+  </mat-card>

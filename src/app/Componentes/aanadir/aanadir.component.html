@@ -1,0 +1,94 @@
+<div class="fondoFor">
+  <h1>Añadir Productos</h1>
+
+  <form class="example-form">
+    <p>
+      <mat-form-field  class="example-full-width" for="nombre">
+        <input matInput placeholder="Nombre" name="nombre" id="nombre" required />
+      </mat-form-field>
+  
+        <mat-form-field  class="example-full-width" for="tipo">
+            <input matInput placeholder="Tipo" name="tipo" id="tipo" required/>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field  class="example-full-width" for="marca">
+            <input matInput placeholder="Marca" name="marca" id="marca" required/>
+        </mat-form-field>
+
+    <mat-form-field  class="example-full-width" for="estado">
+        <input matInput placeholder="Contiene Gluten?" name="estado" id="estado" required/>
+    </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width" for="categoria" >
+        <input matInput placeholder="Categoria" id="categoria" required name="categoria" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" for="ingredientes" >
+        <input matInput placeholder="Ingredientes" name="ingredientes" id="ingredientes" required/>
+    </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field class="example-full-width" for="capacidad" >
+            <input matInput placeholder="Capacidad" id="capacidad" name="capacidad" type="number" required/>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" for="tipoCapacidad" >
+            <input matInput placeholder="Tipo Capacidad" id="tipoCapacidad" name="tipoCapacidad" required/>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field class="example-full-width" for="kcal" >
+            <input matInput placeholder="Kcal" id="kcal" name="kcal" type="number" required/>
+        </mat-form-field>
+      
+        <mat-form-field class="example-full-width" for="grasa" >
+            <input matInput placeholder="Grasas" id="grasa" name="grasa" type="number" required/>
+        </mat-form-field>
+
+    </p>
+    <p>
+        <mat-form-field class="example-full-width" for="saturadas" >
+            <input matInput placeholder="Grasas saturadas" id="saturadas" name="saturadas" type="number" required/>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" for="hidratros" >
+            <input matInput placeholder="Hidratos de carbono" id="hidratos" name="hidratos" type="number" required/>
+        </mat-form-field>
+
+    </p>
+    <p>
+        <mat-form-field class="example-full-width" for="azucares" >
+            <input matInput placeholder="Azucares" id="azucares" name="azucares" type="number" required/>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" for="fibra" >
+            <input matInput placeholder="Fibra Alimentaria" id="fibra" name="fibra" type="number" required/>
+        </mat-form-field>
+
+      
+    </p>
+    <p>
+        <mat-form-field class="example-full-width" for="proteinas" >
+            <input matInput placeholder="Proteinas" id="proteinas" name="proteinas" type="number" required/>
+        </mat-form-field>
+      
+        <mat-form-field class="example-full-width" for="sal" >
+            <input matInput placeholder="Sal" id="sal" name="sal" type="number" required/>
+        </mat-form-field>
+    </p>
+    <p>
+      <input
+        type="file"
+        name="fileImage"
+        id="fileImage"
+        accept="image/png, image/jpeg"
+        (change)="selectFile($event)"
+      />
+    </p>
+    <p>
+      <button type="submit" (click)="GuardarF()" class="myButton">
+        Enviar
+      </button>
+    </p>
+  </form>
+</div>

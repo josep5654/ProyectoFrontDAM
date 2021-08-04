@@ -1,0 +1,16 @@
+.example-card {
+    width: 25%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: beige;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+  .dimensiones{
+    padding: 5%;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+  }

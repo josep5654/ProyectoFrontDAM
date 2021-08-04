@@ -1,0 +1,51 @@
+
+  <h2 *ngIf="!isLogged" class="bienvenida card-header">
+  Bienvenido. Inicia sesion para continuar
+  <button class="btn btn-outline-success btn-block" routerLink="/login">
+    <i class="fas fa-sign-in-alt"></i> Iniciar Sesión</button>
+  </h2>
+
+
+
+<div class="container caja">
+  <div *ngIf="isLogged">
+    <h2>Bienvenido {{ nombreUsuario }}</h2>
+  </div>
+</div>
+<div class="primero caja" *ngIf="isLogged">
+  <h1>Productos</h1>
+  <table class="elevador">
+    <thead>
+      <tr>
+        
+        <th>NOMBRE</th>
+        <th>TIPO ALIMENTO</th>
+        <th>MARCA</th>
+        <th>OPCIONES</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let alimento of alimentos">
+        
+        <td>{{ alimento.nombre }}</td>
+        <td>{{ alimento.tipoAlimento }}</td>
+        <td>{{ alimento.marca }}</td>
+        <td>
+          <button
+            (click)="EditarEsteProducto(alimento.id)"
+            *ngIf="isAdmin"
+            class="myButton"
+          >
+            Editar
+          </button>
+          <button (click)="DeleteP(alimento)" class="myButtonE" *ngIf="isAdmin">
+            Eliminar
+          </button>
+          <button (click)="ConsultarAlimento(alimento.id)" class="myButton">
+            Consultar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,17 @@
+<mat-toolbar class="mb-4">
+   
+    <mat-icon  style="cursor: pointer;" (click)="PaginaIndex()">home</mat-icon>
+    <span style="cursor: pointer;" (click)="PaginaIndex()">  Listado Productos</span>
+
+    <span class="example-spacer"></span>
+
+    <mat-icon class="example-icon" style="cursor: pointer;" aria-hidden="false" (click)="PaginaAdd()" *ngIf="isLogged">add</mat-icon>
+    <span style="cursor: pointer;" (click)="PaginaAdd()" *ngIf="isLogged">Añadir alimento</span>
+
+    <mat-icon class="example-icon" style="cursor: pointer;" aria-hidden="false" (click)="Login()" *ngIf="!isLogged">login</mat-icon>
+    <span style="cursor: pointer;" (click)="Login()" *ngIf="!isLogged">Iniciar Sesion</span>
+
+    <mat-icon class="example-icon" style="cursor: pointer;" aria-hidden="false" (click)="onLogOut()" *ngIf="isLogged" >logout</mat-icon>
+    <span style="cursor: pointer;" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesion</span>
+    
+</mat-toolbar>
